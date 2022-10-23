@@ -1,5 +1,5 @@
-import getTrending from 'services/API';
-import { useState, useEffect } from 'react';
+// import getTrending from 'services/API';
+// import { useState, useEffect } from 'react';
 
 export const Home = () => {
   return (
