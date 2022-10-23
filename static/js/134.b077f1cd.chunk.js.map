@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/134.b077f1cd.chunk.js","mappings":"+LAAaA,EAAS,WACpB,OACE,2BACE,gDAGL,C","sources":["pages/Movies.jsx"],"sourcesContent":["export const Movies = () => {\n  return (\n    <main>\n      <h1>Movies search page</h1>\n    </main>\n  );\n};\n"],"names":["Movies"],"sourceRoot":""}
