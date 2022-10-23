@@ -1,7 +1,13 @@
-export const Movies = () => {
+// import { getBySearch } from 'services/API';
+// import { useSearchParams } from 'react-router-dom';
+
+const Movies = () => {
   return (
     <main>
-      <h1>Movies search page</h1>
+      <h2>Movies search page</h2>
+      {/* <SearchForm onSearch={handleSearch} /> */}
     </main>
   );
 };
+
+export default Movies;

@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
-import { UlMovies, LiMovies } from './MoviesList.styled';
+import { UlMovies, LiMovies, NavLinkStyle } from './MoviesList.styled';
 
 const MoviesList = ({ movies }) => {
   return (
     <UlMovies>
-      {movies.map(({ id, title, poster_path }) => {
+      {movies.map(({ id, title }) => {
         return (
           <LiMovies key={id}>
-            <NavLink to={`/movies/${id}`}>{title}</NavLink>
+            <NavLinkStyle to={`/movies/${id}`}>{title}</NavLinkStyle>
           </LiMovies>
         );
       })}

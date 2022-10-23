@@ -13,7 +13,7 @@ export async function getTrending() {
     console.log(error);
   }
 }
-const query = 'cat';
+
 export async function getBySearch(query) {
   try {
     const resSearch = await axios.get(
@@ -25,4 +25,4 @@ export async function getBySearch(query) {
   }
 }
 console.log(getTrending());
-console.log(getBySearch(query));
+console.log(getBySearch('batman'));
