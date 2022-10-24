@@ -5,6 +5,7 @@ export const UlMovies = styled.ul`
   list-style-type: decimal;
   gap: 10px;
   font-size: 18px;
+  font-weight: 500;
 `;
 
 export const LiMovies = styled.li`
@@ -17,7 +18,6 @@ export const NavLinkStyle = styled(NavLink)`
   border-radius: 4px;
   text-decoration: none;
   color: black;
-  font-weight: 500;
   &.active {
     color: white;
     background-color: orangered;
