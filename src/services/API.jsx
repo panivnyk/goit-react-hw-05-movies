@@ -24,5 +24,36 @@ export async function getBySearch(query) {
     console.log(error);
   }
 }
-console.log(getTrending());
-console.log(getBySearch('batman'));
+
+export async function getMovieDetails(movieId) {
+  try {
+    const resMovieDetails = await axios.get(
+      `${baseURL}/movie/${movieId}?api_key=${API_KEY}`
+    );
+    return await resMovieDetails.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getMovieCast(movieId) {
+  try {
+    const resMovieCast = await axios.get(
+      `${baseURL}/movie/${movieId}/credits?api_key=${API_KEY}`
+    );
+    return await resMovieCast.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getMovieReviews(movieId) {
+  try {
+    const resMovieReviews = await axios.get(
+      `${baseURL}/movie/${movieId}/reviews?api_key=${API_KEY}`
+    );
+    return await resMovieReviews.data.results;
+  } catch (error) {
+    console.log(error);
+  }
+}

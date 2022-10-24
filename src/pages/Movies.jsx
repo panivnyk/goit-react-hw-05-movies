@@ -40,7 +40,7 @@ const Movies = () => {
     <main>
       <h2>Movies search page</h2>
       <InputForm onSubmit={handleSubmit} />
-      {movies.length === 0 ? (
+      {movies.length === 0 && queryInput ? (
         <p>Sorry, there is no any movie</p>
       ) : (
         <MoviesList movies={movies} />
