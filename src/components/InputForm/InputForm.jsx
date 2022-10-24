@@ -1,13 +1,13 @@
 import { Formik, Field, Form } from 'formik';
-// import PropTypes from 'prop-types';
-const InputForm = ({ onSearch }) => {
+import PropTypes from 'prop-types';
+const InputForm = ({ onSubmit }) => {
   return (
     <Formik
       initialValues={{
         query: '',
       }}
       onSubmit={({ query }, { resetForm }) => {
-        onSearch(query);
+        onSubmit(query);
         resetForm();
       }}
     >
@@ -22,6 +22,6 @@ const InputForm = ({ onSearch }) => {
 };
 
 export default InputForm;
-// InputForm.propTypes = {
-//   onSearch: PropTypes.func.isRequired,
-// };
+InputForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

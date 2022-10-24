@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const UlMovies = styled.ul`
   list-style-type: decimal;
   gap: 10px;
-  font-size: 20px;
+  font-size: 18px;
 `;
 
 export const LiMovies = styled.li`
@@ -21,5 +21,11 @@ export const NavLinkStyle = styled(NavLink)`
   &.active {
     color: white;
     background-color: orangered;
+  }
+  :hover,
+  :focus {
+    transform: scale(0.99);
+    cursor: pointer;
+    color: orangered;
   }
 `;
