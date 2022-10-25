@@ -11,10 +11,10 @@ import {
 
 const MovieDetails = () => {
   const { movieId } = useParams();
-  const location = useLocation();
   const [details, setDetails] = useState(null);
   const srcImgBase = 'https://image.tmdb.org/t/p/w300';
   const noImage = '/uc4RAVW1T3T29h6OQdr7zu4Blui.jpg';
+  const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
 
   useEffect(() => {
@@ -67,7 +67,6 @@ const MovieDetails = () => {
             <p>Additional information</p>
             <ul>
               <li>
-                {' '}
                 <NavLink
                   to={`/movies/${movieId}/cast`}
                   state={{ from: backLinkHref }}
@@ -76,7 +75,6 @@ const MovieDetails = () => {
                 </NavLink>
               </li>
               <li>
-                {' '}
                 <NavLink
                   to={`/movies/${movieId}/reviews`}
                   state={{ from: backLinkHref }}
