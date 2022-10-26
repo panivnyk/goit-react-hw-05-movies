@@ -29,8 +29,6 @@ const MovieDetails = () => {
     getDetailsById(movieId);
   }, [movieId]);
 
-  console.log(location.state?.from);
-
   return (
     <div>
       {details && (
