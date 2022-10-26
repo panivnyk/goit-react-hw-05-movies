@@ -12,10 +12,8 @@ const InputForm = ({ onSubmit }) => {
       }}
     >
       <Form>
-        <label>
-          <Field type="text" name="query" />
-          <button type="submit">Search</button>
-        </label>
+        <Field type="text" name="query" />
+        <button type="submit">Search</button>
       </Form>
     </Formik>
   );

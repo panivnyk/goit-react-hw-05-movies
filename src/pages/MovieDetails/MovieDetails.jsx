@@ -21,7 +21,6 @@ const MovieDetails = () => {
     async function getDetailsById(movieId) {
       try {
         const data = await getMovieDetails(movieId);
-
         setDetails(data);
       } catch (error) {
         console.log(error.message);
@@ -29,6 +28,8 @@ const MovieDetails = () => {
     }
     getDetailsById(movieId);
   }, [movieId]);
+
+  console.log(location.state?.from);
 
   return (
     <div>
@@ -98,7 +99,6 @@ export default MovieDetails;
 MovieDetails.propTypes = {
   detail: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
       poster_path: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       release_date: PropTypes.string.isRequired,
