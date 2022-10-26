@@ -1,4 +1,4 @@
-import { useParams, useLocation, Outlet, NavLink } from 'react-router-dom';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,6 +7,7 @@ import {
   NavLinkStyled,
   DivDetailsCard,
   DivDetailsInfo,
+  AddInfoNavLink,
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
@@ -66,20 +67,20 @@ const MovieDetails = () => {
             <p>Additional information</p>
             <ul>
               <li>
-                <NavLink
+                <AddInfoNavLink
                   to={`/movies/${movieId}/cast`}
                   state={{ from: backLinkHref }}
                 >
                   Cast
-                </NavLink>
+                </AddInfoNavLink>
               </li>
               <li>
-                <NavLink
+                <AddInfoNavLink
                   to={`/movies/${movieId}/reviews`}
                   state={{ from: backLinkHref }}
                 >
                   Reviews
-                </NavLink>
+                </AddInfoNavLink>
               </li>
             </ul>
             <Suspense fallback={<p>Loading...</p>}>

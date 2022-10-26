@@ -6,6 +6,16 @@ export const NavLinkStyled = styled(NavLink)`
   font-weight: 500;
 `;
 
+export const AddInfoNavLink = styled(NavLink)`
+  text-decoration: none;
+  &.active {
+    font-weight: 500;
+    text-decoration: underline orangered;
+
+    /* background-color: orangered; */
+  }
+`;
+
 export const DivDetailsCard = styled.div`
   display: flex;
   margin-top: 10px;
